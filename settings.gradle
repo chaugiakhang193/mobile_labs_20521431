@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "mobile_labs_20521431"
+rootProject.name = "mobile_lab02_20521431"
 include ':app'
