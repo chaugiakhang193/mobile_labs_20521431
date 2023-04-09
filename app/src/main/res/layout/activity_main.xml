@@ -1,18 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+
     tools:context=".MainActivity">
 
     <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Full Name"
+        android:inputType="text"
+        android:textSize="20dp"
+        android:textStyle= "bold"
+        android:textColor="#000000"
+        android:layout_marginLeft="5dp"
+        android:gravity ="bottom"
+        />
+    <EditText
+        android:id="@+id/FullName"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter your name here"
+        android:textColorHint="#606060"
+        android:background="@drawable/border"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="5dp"
+        android:inputType="text"
+        android:text="Gross Salary"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity ="bottom"/>
+    <EditText
+        android:id="@+id/GrossSalary"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter gross salary here"
+        android:textColorHint="#606060"
+        android:background="@drawable/border"/>
+
+    <Button
+        android:id="@+id/CalculateBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="center"
+        android:text="Calculate"
+        android:textColorHint="#FFFFFF" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tvBoth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <ListView
+        android:id="@+id/LV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+</LinearLayout>
