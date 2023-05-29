@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".MainActivity">
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Full Name"
+        android:inputType="text"
+        android:textSize="20dp"
+        android:textStyle= "bold"
+        android:textColor="#000000"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity ="bottom"
+        />
+    <EditText
+        android:id="@+id/Fullname"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter your Fullname here"
+        android:textColorHint="#606060"
+        android:background="@drawable/border"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        />
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Phone"
+        android:inputType="text"
+        android:textSize="20dp"
+        android:textStyle= "bold"
+        android:textColor="#000000"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity ="bottom"
+        />
+    <EditText
+        android:id="@+id/Phone"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter your Phone here"
+        android:textColorHint="#606060"
+        android:background="@drawable/border"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        />
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Username"
+        android:inputType="text"
+        android:textSize="20dp"
+        android:textStyle= "bold"
+        android:textColor="#000000"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity ="bottom"
+        />
+    <EditText
+        android:id="@+id/Username"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter your Username here"
+        android:textColorHint="#606060"
+        android:background="@drawable/border"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:inputType="text"
+        android:text="Password"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity ="bottom"/>
+    <EditText
+        android:id="@+id/Password"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter your Password here"
+        android:textColorHint="#606060"
+        android:background="@drawable/border"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/Signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="SignUp"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop = "10dp"
+            android:gravity="center"
+            android:textColorHint="#FFFFFF" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewLoginLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:minHeight="48dp"
+        android:text="@string/already_have_an_account_login_here"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:textColor="@android:color/black"
+        android:textSize="16dp"/>
+</LinearLayout>

@@ -1,6 +1,8 @@
 package com.example.mobile_labs_20521431;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,76 +23,32 @@ import android.widget.TextView;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    Button AddBtn, GetBtn;
-    EditText InName, Inphone;
-    TextView textViewData;
-
+    Button Logout;
+    TextView mFullname;
     FirebaseFirestore db;
     CollectionReference Ref;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-        AddBtn= findViewById(R.id.addBtn);
-        GetBtn= findViewById(R.id.getBtn);
-        InName= findViewById(R.id.inputName);
-        Inphone = findViewById(R.id.inputPhone);
-        textViewData = findViewById(R.id.tvData);
-
+        mFullname = findViewById(R.id.Fullname);
+        Logout = findViewById(R.id.Logout);
         db = FirebaseFirestore.getInstance();
         Ref =db.collection("users");
 
+        String Fullnamepass = getIntent().getStringExtra("Fullname");
+        mFullname.setText(Fullnamepass);
 
 
-
-        AddBtn.setOnClickListener(new View.OnClickListener() {
+        Logout.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                String Name = InName.getText().toString();
-                int Phone = Integer.parseInt(Inphone.getText().toString());
-                Infor user = new Infor(Name,Phone);
+            public void onClick(View v) {
 
-                Ref.add(user).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                    @Override
-                    public void onSuccess(DocumentReference documentReference) {
-                        Toast.makeText(getApplicationContext(), "Success",Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
 
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(getApplicationContext(), "Failure",Toast.LENGTH_LONG).show();
-                    }
-                });
             }
         });
-
-
-
-        GetBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Ref.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-                    @Override
-                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                        String data = "";
-                        for(QueryDocumentSnapshot documentSnapshot:queryDocumentSnapshots)
-                        {
-                            Infor user = documentSnapshot.toObject(Infor.class);
-                            String Name = user.getName();
-                            int Phone= user.getPhone();
-                            if(Name != null && Phone != 0)
-                            {data += "Name:  " + Name + "    Phone:" + Phone + "\n";}
-                        }
-                        textViewData.setText(data);
-
-                    }
-                });
-            }
-        });
-
     }
 
 }

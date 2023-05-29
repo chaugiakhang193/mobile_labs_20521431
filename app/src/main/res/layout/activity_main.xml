@@ -11,77 +11,41 @@
     <TextView
 
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:text="NAME"
+        android:layout_height="150dp"
+        android:text="WELCOME to Home Page  "
         android:inputType="text"
         android:textSize="20dp"
         android:textStyle= "bold"
         android:textColor="#000000"
         android:layout_marginLeft="5dp"
-        android:gravity ="bottom"
+        android:gravity ="center"
         />
-    <EditText
-        android:id="@+id/inputName"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:hint="Enter your name here"
-        android:textColorHint="#606060"
-        android:background="@drawable/border"
-        />
-
-
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginLeft="5dp"
-        android:inputType="text"
-        android:text="PHONE"
-        android:textColor="#000000"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:gravity ="bottom"/>
-    <EditText
-        android:id="@+id/inputPhone"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:hint="Enter your phone here"
-        android:textColorHint="#606060"
-        android:background="@drawable/border"/>
-    <LinearLayout
+        android:id="@+id/Fullname"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColorHint="#606060"
+        android:text="Fullname"
+        android:textSize ="30dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="140dp"
+        android:layout_marginRight="15dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-    <Button
-        android:id="@+id/addBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="ADD DATA"
-        android:layout_marginLeft="80dp"
-        android:gravity="left"
-        android:textColorHint="#FFFFFF" />
 
-    <Button
-        android:id="@+id/getBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="GET DATA"
-        android:layout_marginLeft="30dp"
-        android:gravity="right"
-        android:textColorHint="#FFFFFF" />
+        <Button
+            android:id="@+id/Logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Logout"
+            android:layout_marginLeft="160dp"
+            android:gravity="center"
+            android:textColorHint="#FFFFFF" />
+
+
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/tvData"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-    />
-
-    <ListView
-        android:id="@+id/LV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
 </LinearLayout>
